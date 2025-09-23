@@ -22,8 +22,14 @@ class Project(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        ordering = ["-updated_at"]
+
 
 class Membership(models.Model):
     person = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     role = models.IntegerField(choices=RoleType.choices)
+
+    class Meta:
+        unique_together = ["person", "project"]
