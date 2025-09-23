@@ -5,6 +5,6 @@ from .models import Project
 
 
 class ProjectListView(ListAPIView):
-    queryset = Project.objects.all()
+    queryset = Project.objects.all().order_by("-updated_at")
     serializer_class = ProjectSerializer
     permission_classes = [IsAuthenticated]
