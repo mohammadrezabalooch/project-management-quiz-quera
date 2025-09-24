@@ -3,6 +3,7 @@
 ## Problem Description
 
 [cite_start]This project requires implementing several simple Django models for a project management system[cite: 2]. The models to be completed are **Project**, **Category**, **RoleType**, and **Membership**.
+problem link: https://quera.org/problemset/254221
 
 ### Required Models:
 
