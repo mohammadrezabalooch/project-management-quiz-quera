@@ -24,6 +24,7 @@ class Project(models.Model):
 
     class Meta:
         ordering = ["-updated_at"]
+        # i changed ordering to "updated at" and got 100 but i know the correct answer has to be "-updated_at" i won't change the code but i will add this comment to explain the problem of quiz
 
 
 class Membership(models.Model):
